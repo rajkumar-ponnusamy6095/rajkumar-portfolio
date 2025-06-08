@@ -1,0 +1,7 @@
+// src/styles/custom-bootstrap.scss
+
+// 1. Override Bootstrap variables via `with` clause in @use bootstrap
+@use 'bootstrap/scss/bootstrap' with (
+  $primary: #1a1616,
+  $secondary: #ff6600
+);

@@ -1,0 +1,44 @@
+<div class="container py-5">
+  <h2 class="text-center mb-5">Career Timeline</h2>
+
+  <div class="timeline position-relative">
+    <div
+      *ngFor="let exp of experiences; let i = index"
+      class="timeline-item row justify-content-center align-items-center position-relative"
+    >
+      <!-- Left card -->
+      <div
+        class="col-10 col-md-5 timeline-content p-4 shadow rounded bg-white"
+        [ngClass]="{
+          'order-md-1 text-md-end': i % 2 === 0,
+          'order-md-3 text-md-start': i % 2 === 1,
+        }"
+      >
+        <div class="d-flex align-items-center mb-3">
+          <img [src]="exp.logo" alt="{{ exp.company }} logo" class="company-logo me-3" />
+          <h5 class="mb-0">{{ exp.company }}</h5>
+        </div>
+        <span class="badge bg-primary">{{ exp.position }}</span>
+        <small class="d-block text-muted mb-2">{{ exp.duration }}</small>
+        <!-- <p>{{ exp.description }}</p> -->
+      </div>
+
+      <!-- Dot column -->
+      <div class="col-2 col-md-2 d-flex justify-content-center position-relative order-md-2">
+        <div
+          class="timeline-dot"
+          [ngClass]="{
+            'dot-left': i % 2 === 0,
+            'dot-right': i % 2 === 1,
+          }"
+        ></div>
+      </div>
+
+      <!-- Right card spacer (empty) -->
+      <div
+        class="col-10 col-md-5 d-none d-md-block"
+        [ngClass]="{ 'order-md-3': i % 2 === 0, 'order-md-1': i % 2 === 1 }"
+      ></div>
+    </div>
+  </div>
+</div>

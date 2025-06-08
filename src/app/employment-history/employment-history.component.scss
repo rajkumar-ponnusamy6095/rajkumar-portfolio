@@ -1,0 +1,82 @@
+.timeline {
+  position: relative;
+  padding-left: 0;
+  margin-left: 0;
+
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 4px;
+    height: 100%;
+    background-color: #0d6efd;
+    z-index: 0;
+  }
+
+  .timeline-item {
+    margin-bottom: 3rem;
+    position: relative;
+    display: flex;
+    align-items: center;
+  }
+
+  .timeline-content {
+    max-width: 450px;
+    z-index: 10;
+    transition: all 0.3s ease;
+    background-color: #fff;
+    color: #000;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+
+    h5,
+    p {
+      color: #000;
+    }
+
+    small {
+      color: #666;
+    }
+
+    .badge {
+      background-color: #0d6efd;
+    }
+
+    &:hover {
+      box-shadow: 0 0 20px rgba(13, 110, 253, 0.3);
+      transform: translateY(-5px);
+    }
+
+    .company-logo {
+      width: 100px;
+      height: 100px;
+      object-fit: contain;
+      border-radius: 6px;
+      background: #f8f9fa; // subtle light background behind logo
+      border: 1px solid #ddd;
+    }
+  }
+
+  .timeline-dot {
+    width: 20px;
+    height: 20px;
+    background-color: #0d6efd;
+    border-radius: 50%;
+    border: 4px solid white;
+    box-shadow: 0 0 0 4px rgba(13, 110, 253, 0.3);
+    position: relative;
+    z-index: 11;
+    flex-shrink: 0;
+
+    &.dot-left {
+      margin-right: 12px;
+      margin-left: -12px;
+    }
+
+    &.dot-right {
+      margin-left: 12px;
+      margin-right: -12px;
+    }
+  }
+}
