@@ -1,94 +1,16 @@
-:root {
-  --primary: #00b87b;
-  --secondary: #314355;
-  --light: #f2f2f2;
-  --dark: #2c3e50;
+// Set navbar height
+$navbar-height: 66px;
+
+// Push main content down
+.pt-navbar {
+  padding-top: $navbar-height;
 }
 
-/* Utilities */
-.fw-semi-bold {
-  font-weight: 600;
-}
-.fw-medium {
-  font-weight: 500;
-}
-
-.btn-square,
-.btn-sm-square,
-.btn-lg-square {
-  padding: 0;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-.btn-square {
-  width: 40px;
-  height: 40px;
-}
-.btn-sm-square {
-  width: 30px;
-  height: 30px;
-}
-.btn-lg-square {
-  width: 50px;
-  height: 50px;
+// Adjust wrapper for sticky sidebar
+.sidebar-wrapper {
+  position: sticky;
+  top: 66px; // assuming your navbar is 66px
+  height: calc(100vh - 66px);
+  overflow: hidden; // this keeps overflow inside
 }
 
-.btn.btn-primary {
-  color: #fff;
-}
-
-.title {
-  position: relative;
-}
-.title::before {
-  position: absolute;
-  content: '';
-  width: 10px;
-  height: 10px;
-  bottom: -4px;
-  left: 0;
-  border: 2px solid var(--light);
-  border-radius: 10px;
-}
-.title::after {
-  position: absolute;
-  content: '';
-  width: 50px;
-  height: 2px;
-  bottom: 0;
-  left: 15px;
-  border-radius: 2px;
-  background: var(--light);
-}
-
-/* Animation */
-@keyframes action {
-  0% {
-    transform: translateY(0);
-  }
-  100% {
-    transform: translateY(-15px);
-  }
-}
-
-.back-to-top {
-  position: fixed;
-  display: none;
-  width: 30px;
-  height: 30px;
-  text-align: center;
-  line-height: 1;
-  font-size: 30px;
-  right: 30px;
-  bottom: 30px;
-  transition: background 0.5s;
-  z-index: 11;
-  animation: action 1s infinite alternate;
-}
-.back-to-top i {
-  color: var(--primary);
-}
-.back-to-top i:hover {
-  color: var(--dark);
-}
