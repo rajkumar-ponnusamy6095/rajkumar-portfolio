@@ -1,37 +1,15 @@
-<nav class="navbar navbar-expand-lg navbar-dark bg-primary">
-  <div class="container-fluid">
-    <a class="navbar-brand" href="#">Rajkumar Ponnusamy</a>
-    <!-- Toggler button for mobile -->
-    <button
-      class="navbar-toggler"
-      type="button"
-      data-bs-toggle="collapse"
-      data-bs-target="#navbarNav"
-      aria-controls="navbarNav"
-      aria-expanded="false"
-      aria-label="Toggle navigation"
-    >
-      <span class="navbar-toggler-icon"></span>
-    </button>
-
-    <div class="collapse navbar-collapse" id="navbarNav">
-      <ul class="navbar-nav ms-auto">
-        <!-- <li class="nav-item"><a class="nav-link" routerLink="/">Home</a></li> -->
-        <li class="nav-item"><a class="nav-link" routerLink="/about">About</a></li>
-        <li class="nav-item"><a class="nav-link" routerLink="/projects">Projects</a></li>
-        <li class="nav-item"><a class="nav-link" routerLink="/history">History</a></li>
-        <li class="nav-item"><a class="nav-link" routerLink="/contact">Contact</a></li>
-      </ul>
+<div class="container">
+  <div class="row g-5">
+    <div class="col-lg-3 sticky-lg-top vh-100">
+      <app-sidebar></app-sidebar>
+    </div>
+    <div class="col-lg-9">
+      <app-about></app-about>
+      <app-skills></app-skills>
+      <app-experience></app-experience>
+      <app-services></app-services>
+      <app-projects></app-projects>
+      <app-contact></app-contact>
     </div>
   </div>
-</nav>
-
-<div class="container mt-4">
-  <router-outlet></router-outlet>
 </div>
-
-<footer class="bg-dark text-white text-center py-3 mt-auto">
-  <div class="container">
-    <p class="mb-0">© 2025</p>
-  </div>
-</footer>

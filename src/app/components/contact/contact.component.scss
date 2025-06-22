@@ -1,0 +1,11 @@
+.card {
+  transition: transform 0.3s ease;
+  background-color: var(--secondary) !important;
+}
+.card:hover {
+  transform: translateY(-5px);
+}
+
+.rounded-circle {
+  width: 125px;
+}

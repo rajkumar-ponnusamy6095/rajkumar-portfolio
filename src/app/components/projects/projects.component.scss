@@ -1,0 +1,16 @@
+:root {
+  --theme-color: #005a9c;
+  --theme-color-light: #cce4f7;
+}
+
+.nav-tabs .nav-link.active {
+  background-color: var(--theme-color) !important;
+  color: white !important;
+  border-color: var(--theme-color) var(--theme-color) #fff;
+  font-weight: 600;
+}
+
+.nav-tabs .nav-link:hover:not(.active) {
+  background-color: var(--theme-color-light);
+  color: var(--theme-color);
+}
