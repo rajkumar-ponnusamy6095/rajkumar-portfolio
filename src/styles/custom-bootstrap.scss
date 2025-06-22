@@ -1,7 +1,24 @@
-// src/styles/custom-bootstrap.scss
+// ✅ Override Bootstrap variables before import
+$primary: #00b87b;
+$secondary: #314355;
+$light: #eeeeee;
+$dark: #2c3e50;
 
-// 1. Override Bootstrap variables via `with` clause in @use bootstrap
-@use 'bootstrap/scss/bootstrap' with (
-  $primary: #1a1616,
-  $secondary: #ff6600
-);
+$font-family-base: 'Heebo', sans-serif;
+$body-bg: $dark;
+$body-color: $light;
+
+$headings-font-weight: 600;
+$display-font-weight: 700;
+
+$enable-responsive-font-sizes: true;
+$enable-rounded: false;
+
+$border-color: rgba(255, 255, 255, 0.1);
+$border-radius: 0px;
+
+$link-decoration: none;
+$enable-negative-margins: true;
+
+// ❗ Use @import (safe in current Bootstrap v5)
+@import 'bootstrap/scss/bootstrap';
